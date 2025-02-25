@@ -46,6 +46,11 @@ To include SecureKey in your PHP script, add this line at the top of the file:
 require_once("https://m.vueno.es/securekey/main.php");
 ```
 
+**_Or_**, you can include SecureKey manually by [downloading a release](https://github.com/milestones14/SecureKey-PHP-2FA/releases/), adding the `securekey` folder to your web application, then finally include it by adding:
+```php
+require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
+```
+
 Once included, you can start using SecureKey immediately in your script.
 
 ## Use Examples
@@ -60,7 +65,7 @@ Verifying 2FA codes is essential for Two-Factor Authentication. You can use `ver
 
 ```php
 <?php  
-require_once("https://m.vueno.es/securekey/main.php"); // Include SecureKey  
+require_once("https://m.vueno.es/securekey/main.php"); // Or manually 
 
 // Set default timezone (fallback)  
 date_default_timezone_set('UTC');  
@@ -120,7 +125,7 @@ Generating a secret is essential for Two-Factor Authentication. The secret key i
 
 ```php
 <?php  
-require_once("https://m.vueno.es/securekey/main.php"); // Include SecureKey  
+require_once("https://m.vueno.es/securekey/main.php"); // Or manually 
 
 $secret = generateSecret();  
 echo($secret); // Prints a 16-character secret key for the user to install in their 2FA app  
@@ -135,7 +140,7 @@ This is useful if you need to generate codes using secret keys with the `generat
 
 ```php
 <?php  
-require_once("https://m.vueno.es/securekey/main.php"); // Include SecureKey  
+require_once("https://m.vueno.es/securekey/main.php"); // Or manually 
 
 $secret = "NR2NX7SEQCP5DDZB"; // For testing purposes, replace with the actual secret.  
 echo(generateTotp($secret));  
