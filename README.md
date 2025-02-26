@@ -2,7 +2,9 @@
 
 SecureKey is a comprehensive Two-Factor Authentication (2FA) solution for PHP. Commonly referred to as 'App-based 2FA', 'Time-based 2FA', or 'TOTP', this robust package ensures seamless integration into your PHP scripts, offering top-notch security for your web applications.
 
-**_Encountered a bug or have an idea for improvement? Open a GitHub issue and help us refine SecureKey!_**
+**_Encountered a bug or have an idea for improvement? [Open a GitHub issue](https://github.com/milestones14/SecureKey-PHP-2FA/issues/) issue and help us refine SecureKey!_**
+
+**Please ensure that you have reviewed the [security note](https://github.com/milestones14/SecureKey-PHP-2FA/?tab=security-ov-file#security-note).**
 
 ## What is SecureKey?
 
@@ -40,7 +42,7 @@ SecureKey is the simplest solution for Two-Factor Authentication protection. Wit
 
 SecureKey is easy to implement in your PHP scripts, with no server-side installations required.
 
-To include SecureKey in your PHP script, [download a release](https://github.com/milestones14/SecureKey-PHP-2FA/releases/), add the `securekey` folder to your web application, then finally include it by adding this line at the top of the file:
+To include SecureKey in your PHP script, [download a release](https://github.com/milestones14/SecureKey-PHP-2FA/releases/), add the `securekey` folder, then finally include it by adding this line at the top of the file:
 
 ```php
 require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
