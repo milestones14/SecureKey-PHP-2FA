@@ -43,8 +43,8 @@ SecureKey is straightforward to integrate into your PHP scripts, with no need fo
 ## How to Include SecureKey
 
 1. **Download and Add SecureKey**:
-   - [Download the latest SecureKey release.](https://github.com/milestones14/SecureKey-PHP-2FA/releases)
-   - Add the `securekey` folder to your project.
+   - [Download the latest SecureKey release](https://github.com/milestones14/SecureKey-PHP-2FA/releases)
+   - Add the `securekey` folder to your project
 
 2. **Include SecureKey in Your Script**:
    - At the top of your PHP file, include SecureKey with this line of code:
