@@ -38,15 +38,10 @@ SecureKey is the simplest solution for Two-Factor Authentication protection. Wit
 
 ## How to Include SecureKey
 
-SecureKey is easy to implement in your PHP scripts, with no installations required.
+SecureKey is easy to implement in your PHP scripts, with no server-side installations required.
 
-To include SecureKey in your PHP script, add this line at the top of the file:
+To include SecureKey in your PHP script, [download a release](https://github.com/milestones14/SecureKey-PHP-2FA/releases/), add the `securekey` folder to your web application, then finally include it by adding this line at the top of the file:
 
-```php
-require_once("https://m.vueno.es/securekey/main.php");
-```
-
-**_Or_**, you can include SecureKey manually by [downloading a release](https://github.com/milestones14/SecureKey-PHP-2FA/releases/), adding the `securekey` folder to your web application, then finally include it by adding:
 ```php
 require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
 ```
@@ -59,13 +54,13 @@ After you [include SecureKey in your script](#how-to-include-securekey), you can
 
 ### 2FA Verifier
 
-Verifying 2FA codes is essential for Two-Factor Authentication. You can use `verifyTotp()` to verify the user-provided code with the secret. Here's an example using PHP and HTML:
+Verifying 2FA codes is essential for Two-Factor Authentication. You can use the `verifyTotp()` method to verify the user-provided code with the secret. Here's an example using PHP and HTML:
 
 **PHP**
 
 ```php
 <?php  
-require_once("https://m.vueno.es/securekey/main.php"); // Or manually 
+require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
 
 // Set default timezone (fallback)  
 date_default_timezone_set('UTC');  
@@ -121,11 +116,11 @@ This is an effective way to verify users using 2FA in PHP and HTML. Make sure to
 
 ### 2FA Secret Generator
 
-Generating a secret is essential for Two-Factor Authentication. The secret key is the foundation of 2FA. The codes are generated and [verified](#2fa-verifier) with the secret. You can use `generateSecret()` to generate a 16-character secret key that the user will install in their Two-Factor Authentication app (e.g., Microsoft Authenticator, Google Authenticator, Twilio Authy, etc.) to generate a 6-digit code that you [verify](#2fa-verifier). The `generateSecret()` function is simple to use. Here's an example using PHP:
+Generating a secret is essential for Two-Factor Authentication. The secret key is the foundation of 2FA. The codes are generated and [verified](#2fa-verifier) with the secret. You can use the `generateSecret()` method to generate a 16-character secret key that the user will install in their Two-Factor Authentication app (e.g., Microsoft Authenticator, Google Authenticator, Twilio Authy, etc.) to generate a 6-digit code that you [verify](#2fa-verifier). The `generateSecret()` function is simple to use. Here's an example using PHP:
 
 ```php
 <?php  
-require_once("https://m.vueno.es/securekey/main.php"); // Or manually 
+require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
 
 $secret = generateSecret();  
 echo($secret); // Prints a 16-character secret key for the user to install in their 2FA app  
@@ -136,11 +131,11 @@ And that's it.
 
 ### Code Generator
 
-This is useful if you need to generate codes using secret keys with the `generateTotp()` method. Here's a quick example in PHP:
+This is useful if you need to generate codes using secret keys. You can use the `generateTotp()` method to generate codes using secret 2FA keys. Here's a quick example in PHP:
 
 ```php
 <?php  
-require_once("https://m.vueno.es/securekey/main.php"); // Or manually 
+require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
 
 $secret = "NR2NX7SEQCP5DDZB"; // For testing purposes, replace with the actual secret.  
 echo(generateTotp($secret));  
