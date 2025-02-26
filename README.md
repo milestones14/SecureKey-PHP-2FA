@@ -6,6 +6,8 @@ SecureKey is a comprehensive Two-Factor Authentication (2FA) solution for PHP. C
 
 **Please ensure that you have reviewed the [security note](https://github.com/milestones14/SecureKey-PHP-2FA/?tab=security-ov-file#security-note).**
 
+[Jump to code](#how-to-include-securekey)
+
 ## What is SecureKey?
 
 SecureKey is a powerful and versatile Two-Factor Authentication (2FA) solution designed specifically for PHP. It adds an additional layer of security to web applications by requiring a second form of authentication, thus minimizing the risk of unauthorized access.
