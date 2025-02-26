@@ -38,15 +38,20 @@ SecureKey is the simplest solution for Two-Factor Authentication protection. Wit
 - **Preventing Unauthorized Access**: Minimize the risk of unauthorized access to user accounts and critical systems.
 - **Enhancing User Trust**: Provide users with peace of mind by offering an additional security feature.
 
+SecureKey is straightforward to integrate into your PHP scripts, with no need for server-side installations.
+
 ## How to Include SecureKey
 
-SecureKey is easy to implement in your PHP scripts, with no server-side installations required.
+1. **Download and Add SecureKey**:
+   - Download the SecureKey release.
+   - Add the `securekey` folder to your project.
 
-To include SecureKey in your PHP script, [download a release](https://github.com/milestones14/SecureKey-PHP-2FA/releases/), add the `securekey` folder, then finally include it by adding this line at the top of the file:
-
-```php
-require_once("path/to/securekey/main.php"); // Replace path/to/securekey with the actual path to the securekey folder.
-```
+2. **Include SecureKey in Your Script**:
+   - At the top of your PHP file, include SecureKey with this line of code:
+     ```php
+     require_once("path/to/securekey/main.php");
+     ```
+     *Note: Replace `path/to/securekey` with the actual path to the `securekey` folder.*
 
 Once included, you can start using SecureKey immediately in your script.
 
